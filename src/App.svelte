@@ -12,7 +12,7 @@
 
 <main id="cal">
     <h1 id="title"><span id="icon">{isPrime ? '✅' : '❌'}</span> Prime</h1>
-    <input placeholder="number" bind:value id="input" type="number" />
+    <input placeholder="number" bind:value id="input" type="tel" pattern="\d*" />
 
     <ol id="list">
         {#if value === null || Number(value) === 0}
@@ -107,5 +107,6 @@
       color: #fff;
       border-radius: 32px;
       background-color: #007aff;
+      cursor: pointer;
     }
 </style>
