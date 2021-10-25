@@ -3,7 +3,9 @@
 
     let value = null
     $: range = primeSince(value)
-    $: isPrime = range[range.length - 1] === value
+    $: isPrime = range[range.length - 1] == value
+
+    $: console.log(range, range[range.length - 1], value)
 
     const backToTop = () => {
       window.scrollTo(0, 0)
